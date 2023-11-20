@@ -1,0 +1,27 @@
+nodejs 16.5
+Truffle npm i -g truffle
+
+npm install ganache-cli --global
+
+npm install
+
+ganache-cli -f wss://eth-mainnet.alchemyapi.io/v2/<Your-App-Key> -m <Your-Mnemonic-Phrase> -u 'project id' -p 7545
+
+
+Replace Your-App-Key with your Alchemy Project ID located in the settings of your project. Replace Your-Mnemonic-Phrase with your own mnemonic phrase.
+
+start bot
+
+node ./bot.js
+
+migrate contracts
+
+truffle migrate --reset
+
+fund accounts
+
+truffle exec ./scripts/1_fund.js
+
+create uniswap pool 
+
+truffle exec ./scripts/2_create_pool.js
